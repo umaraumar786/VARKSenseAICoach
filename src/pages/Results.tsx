@@ -56,28 +56,28 @@ export default function Results() {
 
   return (
     <div className="bg-mesh min-h-[calc(100vh-64px)]">
-      <div className="mx-auto max-w-4xl px-5 py-12 sm:py-16">
+      <div className="mx-auto max-w-4xl px-5 py-8 sm:py-12">
         <div className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/70 px-4 py-1.5 text-xs font-semibold text-emerald-700 shadow-sm backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" />
             Your VARK profile
           </span>
-          <h1 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             {demographics.name ? `Here you go, ${demographics.name}` : 'Here are your results'}
           </h1>
-          <p className="mx-auto mt-3 max-w-md text-slate-600">
+          <p className="mx-auto mt-2 max-w-md text-slate-600">
             Based on your answers, here's how your learning preferences break down.
           </p>
         </div>
 
         {/* Chart + dominant */}
-        <div className="mt-10 grid gap-5 lg:grid-cols-5">
+        <div className="mt-7 grid gap-5 lg:grid-cols-5">
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-3">
             <h2 className="font-display text-lg font-bold text-slate-900">
               Your style breakdown
             </h2>
             <p className="text-sm text-slate-500">Percentage of answers per VARK mode</p>
-            <div className="mt-4 h-72 w-full">
+            <div className="mt-3 h-64 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData} margin={{ top: 10, right: 10, left: -18, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
@@ -98,7 +98,7 @@ export default function Results() {
             </div>
           </div>
 
-          <div className="space-y-5 lg:col-span-2">
+          <div className="space-y-4 lg:col-span-2">
             <div
               className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
               style={{ borderTopColor: dominant.color, borderTopWidth: 4 }}
@@ -134,13 +134,13 @@ export default function Results() {
         </div>
 
         {/* AI explanation */}
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
           <h2 className="font-display text-xl font-bold text-slate-900">
             What your profile means
           </h2>
 
           {loading && (
-            <div className="mt-6 flex flex-col items-center justify-center gap-4 py-10 text-center">
+            <div className="mt-5 flex flex-col items-center justify-center gap-3 py-8 text-center">
               <Loader2 className="h-8 w-8 animate-spin text-sky-600" />
               <p className="text-sm font-medium text-slate-600">
                 Your AI coach is reading your profile and building your plan…
@@ -149,7 +149,7 @@ export default function Results() {
           )}
 
           {!loading && error && (
-            <div className="mt-6 rounded-xl bg-rose-50 px-5 py-4 text-sm text-rose-700">
+            <div className="mt-5 rounded-xl bg-rose-50 px-5 py-4 text-sm text-rose-700">
               <div className="flex items-start gap-3">
                 <AlertCircle className="mt-0.5 h-5 w-5 shrink-0" />
                 <div>
@@ -172,8 +172,8 @@ export default function Results() {
 
           {!loading && !error && plan && (
             <>
-              <p className="mt-4 leading-relaxed text-slate-700">{plan.profile_explanation}</p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <p className="mt-3 leading-relaxed text-slate-700">{plan.profile_explanation}</p>
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                 <button
                   onClick={() => navigate('/coach')}
                   className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-600 to-emerald-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-sky-500/25 transition-all hover:shadow-xl active:scale-95"
@@ -193,7 +193,7 @@ export default function Results() {
           )}
 
           {!loading && !error && !plan && (
-            <p className="mt-4 text-sm text-slate-500">Waiting for your plan…</p>
+            <p className="mt-3 text-sm text-slate-500">Waiting for your plan…</p>
           )}
         </div>
       </div>

@@ -71,24 +71,24 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-mesh">
         <div className="absolute inset-0 bg-grid opacity-60" />
-        <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-16 sm:pt-24">
+        <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-12 sm:pt-16">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/70 px-4 py-1.5 text-xs font-semibold text-sky-700 shadow-sm backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
               Powered by the VARK learning model
             </span>
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl">
+            <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl">
               VARKSense
               <span className="block bg-gradient-to-r from-sky-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent">
                 An AI Adaptive Study Coach
               </span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
               Discover how you learn best. VARKSense uses the VARK model — Visual, Auditory,
               Read/Write, and Kinesthetic — to map your learning style, then builds a
               personalized study plan with AI coaching tuned to your subject and your goals.
             </p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
                 to="/assessment"
                 className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-600 to-emerald-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-sky-500/25 transition-all hover:shadow-xl hover:shadow-sky-500/30 active:scale-95"
@@ -111,18 +111,18 @@ export default function Home() {
       </section>
 
       {/* The four styles */}
-      <section className="mx-auto max-w-6xl px-5 py-20">
+      <section className="mx-auto max-w-6xl px-5 py-14">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             The four VARK learning styles
           </h2>
-          <p className="mt-4 text-slate-600">
+          <p className="mt-3 text-slate-600">
             Everyone blends a mix of these four modes. VARKSense pinpoints your dominant
             style so your study time finally works with your brain, not against it.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {styles.map((s) => (
             <div
               key={s.letter}
@@ -148,18 +148,18 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-14">
         <div className="mx-auto max-w-6xl px-5">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               How VARKSense works
             </h2>
-            <p className="mt-4 text-slate-600">
+            <p className="mt-3 text-slate-600">
               Three steps from confusion to a clear, personal study roadmap.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f, i) => (
               <div
                 key={f.title}
@@ -182,18 +182,18 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950 py-14">
         <div className="absolute inset-0 bg-grid opacity-20" />
         <div className="relative mx-auto max-w-3xl px-5 text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to study the way your brain prefers?
           </h2>
-          <p className="mt-4 text-lg text-slate-300">
+          <p className="mt-3 text-lg text-slate-300">
             Take the assessment and get your AI-built study plan in minutes.
           </p>
           <Link
             to="/assessment"
-            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg transition-all hover:bg-slate-100 hover:shadow-xl active:scale-95"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-base font-semibold text-slate-900 shadow-lg transition-all hover:bg-slate-100 hover:shadow-xl active:scale-95"
           >
             Start Assessment
             <ArrowRight className="h-5 w-5" />

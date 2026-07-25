@@ -58,15 +58,15 @@ export default function Assessment() {
   if (step === 'demo') {
     return (
       <div className="bg-mesh">
-        <div className="mx-auto max-w-2xl px-5 py-16 sm:py-20">
+        <div className="mx-auto max-w-2xl px-5 py-10 sm:py-14">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/70 px-4 py-1.5 text-xs font-semibold text-sky-700 shadow-sm backdrop-blur">
               Step 1 of 2
             </span>
-            <h1 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
               Tell us about you
             </h1>
-            <p className="mx-auto mt-4 max-w-md text-slate-600">
+            <p className="mx-auto mt-3 max-w-md text-slate-600">
               A few details so your study plan can be tailored to your subject and your goal.
             </p>
           </div>
@@ -142,9 +142,9 @@ export default function Assessment() {
 
   return (
     <div className="bg-mesh min-h-[calc(100vh-64px)]">
-      <div className="mx-auto max-w-2xl px-5 py-12 sm:py-16">
+      <div className="mx-auto max-w-2xl px-5 py-8 sm:py-12">
         {/* Progress */}
-        <div className="mb-8">
+        <div className="mb-6">
           <div className="flex items-center justify-between text-sm font-medium text-slate-600">
             <span>
               Question {current + 1} of {TOTAL}
@@ -168,7 +168,7 @@ export default function Assessment() {
             {q.prompt}
           </h2>
 
-          <div className="mt-6 space-y-3">
+          <div className="mt-5 space-y-3">
             {q.options.map((opt) => {
               const selected = answers[current] === opt.letter;
               return (
@@ -201,7 +201,7 @@ export default function Assessment() {
         </div>
 
         {/* Nav controls */}
-        <div className="mt-6 flex items-center justify-between">
+        <div className="mt-5 flex items-center justify-between">
           <button
             type="button"
             onClick={() => setCurrent((c) => Math.max(0, c - 1))}

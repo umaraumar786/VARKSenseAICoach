@@ -150,17 +150,17 @@ export default function Coach() {
 
   return (
     <div className="bg-mesh min-h-[calc(100vh-64px)]">
-      <div className="mx-auto max-w-4xl px-5 py-12 sm:py-16">
+      <div className="mx-auto max-w-4xl px-5 py-8 sm:py-12">
         {/* Header */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/70 px-4 py-1.5 text-xs font-semibold text-sky-700 shadow-sm backdrop-blur">
               Your Coach Dashboard
             </span>
-            <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
               {demographics.name ? `${demographics.name}'s Study Plan` : 'Your Study Plan'}
             </h1>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-1.5 text-sm text-slate-600">
               {demographics.subject} · {demographics.challenge}
             </p>
           </div>
@@ -173,7 +173,7 @@ export default function Coach() {
           </button>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-6 flex flex-wrap gap-2">
           <button
             onClick={() => navigate('/results')}
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 transition-all hover:bg-slate-50"
@@ -191,7 +191,7 @@ export default function Coach() {
         </div>
 
         {/* Tabs (desktop) */}
-        <div className="mt-8 hidden gap-1 overflow-x-auto border-b border-slate-200 sm:flex scrollbar-thin">
+        <div className="mt-6 hidden gap-1 overflow-x-auto border-b border-slate-200 sm:flex scrollbar-thin">
           {TABS.map((t) => (
             <button
               key={t.key}
@@ -209,7 +209,7 @@ export default function Coach() {
         </div>
 
         {/* Accordion (mobile) */}
-        <div className="mt-8 space-y-2 sm:hidden">
+        <div className="mt-6 space-y-2 sm:hidden">
           {TABS.map((t) => (
             <div key={t.key} className="overflow-hidden rounded-xl border border-slate-200 bg-white">
               <button
@@ -236,7 +236,7 @@ export default function Coach() {
         </div>
 
         {/* Panel (desktop) */}
-        <div ref={printRef} className="mt-6 hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:block sm:p-8">
+        <div ref={printRef} className="mt-5 hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:block sm:p-7">
           <SectionContent tab={active} plan={plan} />
         </div>
       </div>
@@ -286,7 +286,7 @@ function SectionContent({ tab, plan }: { tab: TabKey; plan: CoachPlan }) {
 
 function BulletList({ items, icon: Icon }: { items: string[]; icon: typeof Brain }) {
   return (
-    <ul className="space-y-3">
+    <ul className="space-y-2.5">
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-3">
           <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-sky-50 text-sky-600">

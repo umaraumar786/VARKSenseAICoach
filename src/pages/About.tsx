@@ -27,29 +27,29 @@ const styles = [
 export default function About() {
   return (
     <div className="bg-mesh">
-      <div className="mx-auto max-w-4xl px-5 py-16 sm:py-24">
+      <div className="mx-auto max-w-4xl px-5 py-10 sm:py-14">
         <div className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/70 px-4 py-1.5 text-xs font-semibold text-sky-700 shadow-sm backdrop-blur">
             <BookOpen className="h-3.5 w-3.5" />
             About VARKSense
           </span>
-          <h1 className="mt-6 font-display text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
             What is VARK?
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
             VARK is a widely used model of learning styles developed by Neil Fleming. It
             categorizes how people prefer to take in and process information into four
             modes: <strong>Visual</strong>, <strong>Auditory</strong>,{' '}
             <strong>Read/Write</strong>, and <strong>Kinesthetic</strong>.
           </p>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mx-auto mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">
             Most people are a blend of several styles, with one or two usually dominant.
             Understanding your profile helps you choose study techniques that genuinely fit
             how your mind works — instead of fighting against it.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {styles.map((s) => (
             <div
               key={s.name}
@@ -66,7 +66,7 @@ export default function About() {
           ))}
         </div>
 
-        <div className="mt-14 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
           <h2 className="font-display text-2xl font-bold text-slate-900">
             About this project
           </h2>
@@ -82,7 +82,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center">
           <Link
             to="/assessment"
             className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-600 to-emerald-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-sky-500/25 transition-all hover:shadow-xl active:scale-95"
