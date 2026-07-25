@@ -24,13 +24,13 @@ type TabKey =
   | 'memory_techniques'
   | 'exam_prep_advice';
 
-const TABS: { key: TabKey; label: string; icon: typeof Brain }[] = [
-  { key: 'study_strategies', label: 'Study Strategies', icon: Brain },
-  { key: 'weekly_plan', label: 'Weekly Plan', icon: CalendarDays },
-  { key: 'revision_tips', label: 'Revision Tips', icon: RotateCcw },
-  { key: 'note_taking_methods', label: 'Note-Taking', icon: NotebookPen },
-  { key: 'memory_techniques', label: 'Memory Techniques', icon: BrainCog },
-  { key: 'exam_prep_advice', label: 'Exam Prep', icon: ClipboardCheck },
+const TABS: { key: TabKey; label: string; short: string; icon: typeof Brain }[] = [
+  { key: 'study_strategies', label: 'Study Strategies', short: 'Strategies', icon: Brain },
+  { key: 'weekly_plan', label: 'Weekly Plan', short: 'Weekly Plan', icon: CalendarDays },
+  { key: 'revision_tips', label: 'Revision Tips', short: 'Revision', icon: RotateCcw },
+  { key: 'note_taking_methods', label: 'Note-Taking', short: 'Note-Taking', icon: NotebookPen },
+  { key: 'memory_techniques', label: 'Memory Techniques', short: 'Memory', icon: BrainCog },
+  { key: 'exam_prep_advice', label: 'Exam Prep', short: 'Exam Prep', icon: ClipboardCheck },
 ];
 
 export default function Coach() {
@@ -191,19 +191,19 @@ export default function Coach() {
         </div>
 
         {/* Tabs (desktop) */}
-        <div className="mt-6 hidden gap-1 overflow-x-auto border-b border-slate-200 sm:flex scrollbar-thin">
+        <div className="mt-6 hidden grid-cols-6 gap-1 border-b border-slate-200 sm:grid">
           {TABS.map((t) => (
             <button
               key={t.key}
               onClick={() => setActive(t.key)}
-              className={`flex items-center gap-2 whitespace-nowrap border-b-2 px-4 py-3 text-sm font-semibold transition-colors ${
+              className={`flex items-center justify-center gap-1.5 border-b-2 px-2 py-2.5 text-xs font-semibold transition-colors ${
                 active === t.key
                   ? 'border-sky-600 text-sky-700'
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
-              <t.icon className="h-4 w-4" />
-              {t.label}
+              <t.icon className="h-3.5 w-3.5 shrink-0" />
+              <span className="truncate">{t.short}</span>
             </button>
           ))}
         </div>
